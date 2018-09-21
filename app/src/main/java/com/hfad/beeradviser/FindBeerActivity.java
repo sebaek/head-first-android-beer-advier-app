@@ -3,6 +3,8 @@ package com.hfad.beeradviser;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class FindBeerActivity extends Activity {
 
@@ -13,5 +15,12 @@ public class FindBeerActivity extends Activity {
     }
 
     public void onClickFindBeer(View view) {
+        TextView brands = findViewById(R.id.brands);
+
+        Spinner color = findViewById(R.id.color);
+
+        String beerType = String.valueOf(color.getSelectedItem());
+
+        brands.setText(beerType);
     }
 }
